@@ -1,6 +1,7 @@
+```markdown
 # 🛒 VibeCommerce — Full Stack Mock E-Commerce Cart
 
-A modern, full-stack mock shopping cart web app built for the **Vibe Commerce Coding Assessment**.  
+A modern **full-stack mock shopping cart web app** built for the **Vibe Commerce Coding Assessment**.  
 This project demonstrates complete **frontend–backend integration** using **React (Vite)**, **Node.js/Express**, and **SQLite**, featuring realistic e-commerce flows like viewing products, adding/removing cart items, calculating totals, and performing a mock checkout.
 
 ---
@@ -24,7 +25,7 @@ This project demonstrates complete **frontend–backend integration** using **Re
 |--------|------------------|
 | **Frontend** | React, TypeScript, Vite, TailwindCSS |
 | **Backend** | Node.js, Express.js, TypeScript |
-| **Database** | SQLite (using Drizzle ORM / seed on startup) |
+| **Database** | SQLite (via Drizzle ORM, auto-seeded on startup) |
 | **Build Tools** | Vite, esbuild |
 | **Version Control** | Git & GitHub |
 | **License** | MIT License |
@@ -45,99 +46,130 @@ This project demonstrates complete **frontend–backend integration** using **Re
 
 ## 🧩 Folder Structure
 
+```
+
 VibeCommerce/
-├── client/ # React frontend
-│ ├── src/
-│ │ ├── components/ # Reusable UI + pages (Products, Cart, Checkout)
-│ │ ├── hooks/ # Custom React hooks
-│ │ ├── lib/ # Helper functions
-│ │ └── pages/ # Page views (Home, Not Found)
-│ ├── public/ # Static assets & favicon
-│ ├── index.html # Vite entrypoint
-│ └── package.json
+├── client/                # React frontend
+│   ├── src/
+│   │   ├── components/    # UI + logic (Products, Cart, Checkout)
+│   │   ├── hooks/         # Custom React hooks
+│   │   ├── lib/           # Utilities & helper functions
+│   │   └── pages/         # Page views (Home, Not Found)
+│   ├── public/            # Static assets
+│   ├── index.html         # Vite entry point
+│   └── package.json
 │
-├── server/ # Express backend
-│ ├── index.ts # Main entry
-│ ├── routes.ts # API endpoints
-│ ├── storage.ts # SQLite or mock DB setup
-│ ├── vite.ts # Vite integration for dev/prod
-│ ├── dist/ # Built output
-│ └── package.json
+├── server/                # Express backend
+│   ├── index.ts           # Main entry
+│   ├── routes.ts          # API endpoints
+│   ├── storage.ts         # SQLite / mock DB setup
+│   ├── vite.ts            # Vite integration
+│   └── package.json
 │
-├── shared/ # Shared schema/types between frontend & backend
-│ └── schema.ts
+├── shared/                # Shared schema/types between frontend & backend
+│   └── schema.ts
 │
 ├── .gitignore
 ├── README.md
 └── LICENSE
 
-yaml
-Copy code
+````
 
 ---
 
 ## ⚙️ Installation & Setup
 
-##1️⃣ Clone Repository
+### 1️⃣ Clone Repository
 
 ```bash
 git clone https://github.com/<your-username>/VibeCommerce.git
 cd VibeCommerce
+````
 
-##2️⃣ Install Frontend Dependencies
-bash
-Copy code
+### 2️⃣ Install Frontend Dependencies
+
+```bash
 cd client
 npm install
 npm run build
+```
 
-##3️⃣ Install Backend Dependencies
-bash
-Copy code
+### 3️⃣ Install Backend Dependencies
+
+```bash
 cd ../server
 npm install
 npm run build
 npm start
+```
 
-4️⃣ Access Application
-Visit 👉 http://127.0.0.1:5000
-You’ll see the VibeCommerce app with mock products, cart view, and checkout flow.
+### 4️⃣ Access Application
 
-🧮 Example Checkout Flow
-Open http://127.0.0.1:5000
+Visit 👉 [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
-Browse product grid
+You’ll see the **VibeCommerce App** with mock products, a working cart, and a checkout flow.
 
-Click Add to Cart
+---
 
-Open the Cart View to update quantity or remove items
+## 🧮 Example Checkout Flow
 
-Proceed to checkout and submit mock details (name/email)
+1. Open [http://127.0.0.1:5000](http://127.0.0.1:5000)
+2. Browse the product grid
+3. Click **Add to Cart**
+4. Open the **Cart View** to update quantity or remove items
+5. Proceed to **Checkout**, fill mock name & email
+6. Receive a **receipt modal** showing total amount and timestamp
 
-Receive a receipt modal showing total amount and timestamp
+---
 
-##🎥 Demo Video
-🎬 https://www.loom.com/share/a18aea2e003240b9a274f2d60b72f27a
+## 🎥 Demo Video
 
-🧰 Development Commands
-Command	Description
-npm run dev (frontend)	Run frontend in Vite dev mode
-npm run build	Build project for production
-npm start (backend)	Start Express server serving React build
-npm run clean	Clean dist folders
+🎬 [Watch the Demo on Loom](https://www.loom.com/share/a18aea2e003240b9a274f2d60b72f27a)
 
-🧠 Troubleshooting Tips
-If you see a blank screen → ensure serveStatic() in vite.ts points to ../dist/public
+---
 
-If npm start fails with ENOTSUP, remove reusePort (Windows issue — already fixed in this repo)
+## 🧰 Development Commands
 
-Ensure ports 5000 (backend) are free before starting
+| Command                  | Description                                |
+| ------------------------ | ------------------------------------------ |
+| `npm run dev` (frontend) | Run frontend in Vite dev mode              |
+| `npm run build`          | Build project for production               |
+| `npm start` (backend)    | Start Express server (serving React build) |
+| `npm run clean`          | Clean dist folders                         |
 
-📜 License — MIT
+---
 
-👤 Author
-Sarthak Nagave
-📧 sarthaknagave@gmail.com
-🌐 https://github.com/Sarthak-Nagave
+## 🧠 Troubleshooting Tips
 
-#vibecommerce #fullstack #react #express #sqlite #ecommerce #vite #typescript #nodejs #coding-assessment
+⚠️ **Blank screen?**
+Ensure `serveStatic()` in `vite.ts` correctly points to `../dist/public`.
+
+⚙️ **Windows ENOTSUP error?**
+Remove `reusePort` option (already fixed in this repo).
+
+🔌 **Port in use?**
+Stop any process on port `5000` before running `npm start`.
+
+---
+
+## 📜 License — MIT
+
+This project is licensed under the [MIT License](./LICENSE).
+
+---
+
+## 👤 Author
+
+**Sarthak Nagave**
+📧 [sarthaknagave@gmail.com](mailto:sarthaknagave@gmail.com)
+🌐 [GitHub — Sarthak-Nagave](https://github.com/Sarthak-Nagave)
+
+---
+
+### 🏷️ Tags
+
+`#vibecommerce` `#fullstack` `#react` `#express` `#sqlite` `#ecommerce` `#vite` `#typescript` `#nodejs` `#coding-assessment`
+
+````
+
+---
