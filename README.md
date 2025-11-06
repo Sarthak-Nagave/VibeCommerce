@@ -78,20 +78,20 @@ Copy code
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone Repository
+##1️⃣ Clone Repository
 
 ```bash
 git clone https://github.com/<your-username>/VibeCommerce.git
 cd VibeCommerce
 
-2️⃣ Install Frontend Dependencies
+##2️⃣ Install Frontend Dependencies
 bash
 Copy code
 cd client
 npm install
 npm run build
 
-3️⃣ Install Backend Dependencies
+##3️⃣ Install Backend Dependencies
 bash
 Copy code
 cd ../server
@@ -116,7 +116,7 @@ Proceed to checkout and submit mock details (name/email)
 
 Receive a receipt modal showing total amount and timestamp
 
-🎥 Demo Video
+##🎥 Demo Video
 🎬 https://www.loom.com/share/a18aea2e003240b9a274f2d60b72f27a
 
 🧰 Development Commands
