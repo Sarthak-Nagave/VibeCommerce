@@ -44,38 +44,6 @@ This project demonstrates complete **frontend–backend integration** using **Re
 
 ---
 
-## 🧩 Folder Structure
-
-```
-
-VibeCommerce/
-├── client/                # React frontend
-│   ├── src/
-│   │   ├── components/    # UI + logic (Products, Cart, Checkout)
-│   │   ├── hooks/         # Custom React hooks
-│   │   ├── lib/           # Utilities & helper functions
-│   │   └── pages/         # Page views (Home, Not Found)
-│   ├── public/            # Static assets
-│   ├── index.html         # Vite entry point
-│   └── package.json
-│
-├── server/                # Express backend
-│   ├── index.ts           # Main entry
-│   ├── routes.ts          # API endpoints
-│   ├── storage.ts         # SQLite / mock DB setup
-│   ├── vite.ts            # Vite integration
-│   └── package.json
-│
-├── shared/                # Shared schema/types between frontend & backend
-│   └── schema.ts
-│
-├── .gitignore
-├── README.md
-└── LICENSE
-
-````
-
----
 
 ## ⚙️ Installation & Setup
 
